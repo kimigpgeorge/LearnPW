@@ -67,7 +67,7 @@ test('UI controls',async ({page})=>
 });
 
 
-test.only('child windows hal',async({browser})=>
+test('child windows hal',async({browser})=>
 {
 
     const context =await  browser.newContext();
@@ -88,9 +88,9 @@ test.only('child windows hal',async({browser})=>
    console.log(text);
     const arrayText = text.split("@")
     const domain =  arrayText[1].split(" ")[0]
-    //console.log(domain);
-    //await page.locator("#username").fill(domain);
-    //console.log(await page.locator("#username").inputValue());
+    console.log(domain);
+    await page.locator("#username").fill(domain);
+    console.log(await page.locator("#username").inputValue());
  
 });
     
